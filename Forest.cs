@@ -9,13 +9,13 @@ namespace ThreadOefening
 {
     class Forest
     {
-        List<Monkey> monkeys = new List<Monkey>();
-        List<Tree> trees = new List<Tree>();
-        public ImageGenerator ImageGenerator;
-        public int Width;
-        public int Height;
+        private List<Monkey> monkeys = new List<Monkey>();
+        private List<Tree> trees = new List<Tree>();
+        public ImageGenerator ImageGenerator { get; private set; }
+        public int Width { get; private set; }
+        public int Height { get; private set; }
         private static int HighestID = 0;
-        public int ID;
+        public int ID { get; private set; }
 
         public Forest(List<String> monkeyNames, int amountOfTrees, int width, int height)
         {

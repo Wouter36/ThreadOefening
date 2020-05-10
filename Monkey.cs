@@ -9,15 +9,15 @@ namespace ThreadOefening
 {
     class Monkey
     {
-        List<Tree> VisitedTrees = new List<Tree>();
-        Tree CurrentTree{get; set; }
-        Forest forest { get; set; }
-        bool edgeReached = false;
-        string Name = "no name";
-        static Random random = new Random();
-        readonly Color color;
+        private List<Tree> VisitedTrees = new List<Tree>();
+        private Tree CurrentTree{get; set; }
+        private Forest forest { get; set; }
+        private bool edgeReached { get; set; } = false;
+        public string Name { get; private set; } = "no name";
+        private static Random random = new Random();
+        private readonly Color color;
         private static int HighestID = 0;
-        public int ID;
+        public int ID { get; private set; }
 
         public Monkey(Tree tree, Forest forest, string name)
         {

@@ -12,10 +12,10 @@ namespace ThreadOefening
     class ImageGenerator
     {
         private static readonly object LockObj = new object();
-        Graphics g;
-        Bitmap bm;
-        int SizeMultiplier = 4;
-        int treeSize = 6;
+        private Graphics g { get; set; }
+        private Bitmap bm { get; set; }
+        private int SizeMultiplier { get; set; } = 4;
+        private int treeSize { get; set; } = 6;
         public ImageGenerator(int x, int y)
         {
             bm = new Bitmap(x * SizeMultiplier, y * SizeMultiplier);

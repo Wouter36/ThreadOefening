@@ -11,7 +11,7 @@ namespace ThreadOefening
         public int X { get; private set; }
         public int Y { get; private set; }
         private static int HighestID = 0;
-        public int ID;
+        public int ID { get; private set; };
 
         public Tree(int x, int y)
         {
